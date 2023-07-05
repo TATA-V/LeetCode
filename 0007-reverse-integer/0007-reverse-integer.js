@@ -5,8 +5,8 @@
 var reverse = function (x) {
   let sign = "";
   let arr = x.toString().split("");
-  const MAX_INT = Math.pow(2, 31) - 1;
-  const MIN_INT = -Math.pow(2, 31);
+  let MAX_INT = Math.pow(2, 31) - 1;
+  let MIN_INT = -Math.pow(2, 31);
 
   if (arr[0] === "-" || arr[0] === "+") {
     sign = arr[0];
