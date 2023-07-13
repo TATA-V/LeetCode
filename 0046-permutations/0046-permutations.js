@@ -11,7 +11,7 @@ var permute = function (nums) {
   arr.forEach((fixed, index, origin) => {
     const rest = [...origin.slice(0, index), ...origin.slice(index + 1)]; // 0~현재 인덱스 + 현재 인덱스 다음부터~끝까지
     const permutations = permute(rest, selectNumber - 1); // 나머지에 대해서 순열을 구한다.
-    const attached = permutations.map((permutation) => [fixed, ...permutation]); //  돌아온 조합에 떼 놓은(fixed) 값 붙이기
+    const attached = permutations.map((permutation) => [fixed, ...permutation]); //  돌아온 순열에 떼 놓은(fixed) 값 붙이기
     results.push(...attached);
   });
   return results;
